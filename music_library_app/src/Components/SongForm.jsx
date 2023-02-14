@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './SongForm.css';
 
 const SongForm = (props) => {
 
@@ -23,29 +24,37 @@ const SongForm = (props) => {
 
 
     return ( 
+
         <form onSubmit={handleSubmit} className = 'form-grid'>
-        <div className = "form-group">
-            <label>Title</label>
-            <input type = 'string' className = 'form-control' value = {title} onChange={(event) => setTitle(parseFloat(event.target.value))}/>
-        </div>
-        <div className = "form-group">
-            <label>Artist</label>                
-            <input type = 'string' className = 'form-control' value = {artist} onChange={(event) => setArtist(event.target.value)}/>
-        </div>
-        <div className = "form-group">
-            <label>Album</label>
-            <input type = 'string' className = 'form-control' value = {album} onChange={(event) => setAlbum(parseFloat(event.target.value))}/>
-        </div>
-        <div className = "form-group">
-            <label>Release Date</label>
-            <input type = 'date' className = 'form-control' value = {releaseDate} onChange={(event) => setReleaseDate(parseFloat(event.target.value))}/>
-        </div>
-        <div className = "form-group">
-            <label>Genre</label>
-            <input type = 'string' className = 'form-control' value = {genre} onChange={(event) => setGenre(parseFloat(event.target.value))}/>
-        </div>
-        <button type = 'submit' className = 'btn btn-primary' style = {{'margin-top': '1em'}}>Add</button>
-    </form>
+            <p>ADD MUSIC</p>
+            <br/>
+            <div className = "form-group">
+                <label>TITLE:&nbsp;&nbsp;&nbsp;</label>
+                <input type = 'string' className = 'form-control' value = {title} onChange={(event) => setTitle(parseFloat(event.target.value))}/>
+            </div>
+            <br/>
+            <div className = "form-group">
+                <label>ARTIST:&nbsp;&nbsp;</label>                
+                <input type = 'string' className = 'form-control' value = {artist} onChange={(event) => setArtist(event.target.value)}/>
+            </div>
+            <br/>
+            <div className = "form-group">
+                <label>ALBUM:&nbsp;&nbsp;&nbsp;</label>
+                <input type = 'string' className = 'form-control' value = {album} onChange={(event) => setAlbum(parseFloat(event.target.value))}/>
+            </div>
+            <br/>
+            <div className = "form-group">
+                <label>RELEASE <br/> DATE:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type = 'date' className = 'form-control' value = {releaseDate} onChange={(event) => setReleaseDate(parseFloat(event.target.value))}/>
+            </div>
+            <br/>
+            <div className = "form-group">
+                <label>GENRE:&nbsp;&nbsp;&nbsp;</label>
+                <input type = 'string' className = 'form-control' value = {genre} onChange={(event) => setGenre(parseFloat(event.target.value))}/>
+            </div>
+            <br/>
+            <button type = 'submit' className = 'btn btn-primary' style = {{'margin-top': '1em'}}>ADD SONG</button>
+        </form>
      );
 }
 

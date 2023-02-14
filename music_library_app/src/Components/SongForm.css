@@ -1,0 +1,28 @@
+form{
+    background-color: #fde9fb;
+    padding: 40px;
+    margin: 50px;
+    color: #b35cd1;
+    font-family: Andale Mono, monospace;
+    width:fit-content;
+}
+
+button{
+    background-color: #b35cd1;
+    color: white;
+    font-family: Andale Mono, monospace;
+    border-style: solid;
+    border-color: #b35cd1;
+    padding: 5px;
+    position: relative;
+    left: 26%;
+    width: 101px;
+}
+
+input{
+    border:none;
+}
+p{
+    font-size: x-large;
+    text-align: center;
+}

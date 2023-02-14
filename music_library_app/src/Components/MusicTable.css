@@ -1,19 +1,25 @@
-table{
+table, th, td{
     background-color: #fde9fb;
-    padding: 30px;
-    margin: 40px;
+    padding: 20px;
+    margin: 120px;
     color:#b35cd1;
     font-family: Andale Mono, monospace; 
     border: 0.5px solid rgb(158, 154, 154);
-    border-collapse: separate;
-    border-spacing: 15px;
+    text-align: center;
+
 }
 p{ 
     font-size: xx-large;
     border: #fde9fb;
-    text-align: center;
 }
 .td{
     font-size:xx-small;
 }
 
+td, th{
+    background-color: #fcf6fb;
+}
+
+th{
+    font-size: large;
+}

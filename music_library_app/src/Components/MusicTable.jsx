@@ -1,28 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-// Takes in a single post object from PostMapper as props
+// Takes in a single post object from SongMapper as props
 
-const MusicTable = (props) => {
-
-    const [songs, SetSongs] = useState([]);
-
-
-    useEffect(() => {
-        GetAllSongs();
-    }, []);
-
-    async function GetAllSongs(){
-        const response = await axios.get('http://127.0.0.1:8000/api/songs/')
-        console.log(response.data);
-        SetSongs(response.data)      
-    }
-
+const MusicTable = ({songs}) => {
     return ( 
-        <div>
-            
-        </div>
-     );
+        <table>
+            <tr>
+                <th>TITLE</th>
+                <th>ARTIST</th> 
+                <th>ALBUM</th>
+                <th>RELEASE DATE</th>
+                <th>GENRE</th>
+            </tr>
+            <tr>
+                <td>{songs.map((el, index) => <div key = {index} >{el.title}</div>)}</td>
+                <td>{songs.map((el, index) => <div key = {index} >{el.artist}</div>)}</td>
+                <td>{songs.map((el, index) => <div key = {index} >{el.album}</div>)}</td>
+                <td>{songs.map((el, index) => <div key = {index} >{el.releaseDate}</div>)}</td>
+                <td>{songs.map((el, index) => <div key = {index} >{el.genre}</div>)}</td>    
+            </tr>
+        </table>
+    );
 }
 
 export default MusicTable;

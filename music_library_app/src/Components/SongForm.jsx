@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './SongForm.css';
 
 const SongForm = (props) => {
@@ -9,28 +10,43 @@ const SongForm = (props) => {
     const [releaseDate, setReleaseDate] = useState('');
     const [genre, setGenre] = useState('');
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        let newSong = {
+
+
+    async function onSubmit(event) {
+        event.preventDefault();  //prevents the page from refreshing after submitting
+        const formValuesObject = {
             title : title,
             artist : artist,
             album : album,
-            releaseDate : releaseDate,
+            release_date : releaseDate,
             genre : genre,
         }
-        console.log(newSong);
-        props.addNewSongProperty(newSong);
+    
+        sendSong(formValuesObject)
+        // await axios.post('http://127.0.0.1:8000/api/songs/', formValuesObject)
+        console.log(formValuesObject);
+    }
+
+    async function sendSong(song){
+        try {
+        let response = await axios.post('http://127.0.0.1:8000/api/songs/', song)
+        console.log("This is the response",response)
+        await props.GetAllSongs()
+            
+        } catch (error) {
+            console.log("The API NO WORKIE", error.message)
+        }
     }
 
 
     return ( 
 
-        <form onSubmit={handleSubmit} className = 'form-grid'>
+        <form onSubmit={onSubmit} className = 'form-grid'>
             <p>ADD MUSIC</p>
             <br/>
             <div className = "form-group">
                 <label>TITLE:&nbsp;&nbsp;&nbsp;</label>
-                <input type = 'string' className = 'form-control' value = {title} onChange={(event) => setTitle(parseFloat(event.target.value))}/>
+                <input type = 'string' className = 'form-control' value = {title} onChange={(event) => setTitle(event.target.value)}/>
             </div>
             <br/>
             <div className = "form-group">
@@ -40,17 +56,17 @@ const SongForm = (props) => {
             <br/>
             <div className = "form-group">
                 <label>ALBUM:&nbsp;&nbsp;&nbsp;</label>
-                <input type = 'string' className = 'form-control' value = {album} onChange={(event) => setAlbum(parseFloat(event.target.value))}/>
+                <input type = 'string' className = 'form-control' value = {album} onChange={(event) => setAlbum(event.target.value)}/>
             </div>
             <br/>
             <div className = "form-group">
                 <label>RELEASE <br/> DATE:&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type = 'date' className = 'form-control' value = {releaseDate} onChange={(event) => setReleaseDate(parseFloat(event.target.value))}/>
+                <input type = 'date' className = 'form-control' value = {releaseDate} onChange={(event) => setReleaseDate(event.target.value)}/>
             </div>
             <br/>
             <div className = "form-group">
                 <label>GENRE:&nbsp;&nbsp;&nbsp;</label>
-                <input type = 'string' className = 'form-control' value = {genre} onChange={(event) => setGenre(parseFloat(event.target.value))}/>
+                <input type = 'string' className = 'form-control' value = {genre} onChange={(event) => setGenre(event.target.value)}/>
             </div>
             <br/>
             <button type = 'submit' className = 'btn btn-primary' style = {{'margin-top': '1em'}}>ADD SONG</button>

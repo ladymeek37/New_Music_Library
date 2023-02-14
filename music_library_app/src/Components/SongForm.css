@@ -5,6 +5,7 @@ form{
     color: #b35cd1;
     font-family: Andale Mono, monospace;
     width:fit-content;
+    border: 0.5px solid rgb(158, 154, 154);
 }
 
 button{

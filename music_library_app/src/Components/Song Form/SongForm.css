@@ -1,4 +1,4 @@
-form{
+.songform{
     background-color: #fde9fb;
     padding: 40px;
     color: #b35cd1;
@@ -7,11 +7,11 @@ form{
     border: 0.5px solid rgb(158, 154, 154);
     float: right;
     position: relative;
-    top: -840px;
+    top: -982px;
     margin:130px
 }
 
-button{
+.SongFormButton{
     background-color: #b35cd1;
     color: white;
     font-family: Andale Mono, monospace;
@@ -24,7 +24,7 @@ button{
 }
 
 input{
-    border:none;
+    border: none;
 }
 legend{
     font-size: x-large;

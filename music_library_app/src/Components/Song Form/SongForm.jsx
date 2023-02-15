@@ -41,7 +41,7 @@ const SongForm = (props) => {
 
     return ( 
 
-        <form onSubmit={onSubmit} className = 'form-grid'>
+        <form onSubmit={onSubmit} className = 'form-grid songform'>
             <legend>ADD MUSIC</legend>
             <br/>
             <div className = "form-group">
@@ -69,7 +69,7 @@ const SongForm = (props) => {
                 <input type = 'string' className = 'form-control' value = {genre} onChange={(event) => setGenre(event.target.value)}/>
             </div>
             <br/>
-            <button type = 'submit' className = 'btn btn-primary' style = {{'margin-top': '1em'}}>ADD SONG</button>
+            <button class = 'SongFormButton' type = 'submit' style = {{'margin-top': '1em'}}>ADD SONG</button>
         </form>
      );
 }

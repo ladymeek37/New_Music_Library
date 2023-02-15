@@ -1,12 +1,15 @@
 import React from 'react';
-import "./MusicTable.css"
+import "./MusicTable.css";
+
 
 // Takes in a single post object from SongMapper as props
 
 const MusicTable = ({songs}) => {
     return ( 
         <table width = "50%" height = "50%" >
+            
             <p>SAVED SONGS</p>
+            
             <tr>
                 <th>TITLE</th>
                 <th>ARTIST</th> 

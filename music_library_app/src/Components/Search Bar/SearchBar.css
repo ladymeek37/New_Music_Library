@@ -1,0 +1,35 @@
+.searchbarform{
+    background-color: #fde9fb;
+    padding: 40px;
+    margin:80px;
+    color: #b35cd1;
+    font-family: Andale Mono, monospace;
+    width:fit-content;
+    border: 0.5px solid rgb(158, 154, 154);
+    position: relative;
+    right:-400px;
+}
+
+label{
+    font-size: large;
+    position: relative;
+}
+
+input{
+    position: relative;
+    right: -4px;
+    border: #b35cd1;
+    padding: 6px;
+}
+
+.SearchBarButton{
+    font-size: xx-small;
+    background-color: #b35cd1;
+    color: white;
+    font-family: Andale Mono, monospace;
+    border-style: solid;
+    border-color: #b35cd1;
+    padding: -5px;
+    position: relative;
+    right: -15px;
+}

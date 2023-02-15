@@ -1,11 +1,14 @@
 form{
     background-color: #fde9fb;
     padding: 40px;
-    margin: 80px;
     color: #b35cd1;
     font-family: Andale Mono, monospace;
     width:fit-content;
     border: 0.5px solid rgb(158, 154, 154);
+    float: right;
+    position: relative;
+    top: -840px;
+    margin:130px
 }
 
 button{
@@ -23,7 +26,7 @@ button{
 input{
     border:none;
 }
-p{
+legend{
     font-size: x-large;
     text-align: center;
 }

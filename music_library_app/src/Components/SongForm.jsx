@@ -42,7 +42,7 @@ const SongForm = (props) => {
     return ( 
 
         <form onSubmit={onSubmit} className = 'form-grid'>
-            <p>ADD MUSIC</p>
+            <legend>ADD MUSIC</legend>
             <br/>
             <div className = "form-group">
                 <label>TITLE:&nbsp;&nbsp;&nbsp;</label>

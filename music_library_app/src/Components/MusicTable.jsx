@@ -5,7 +5,7 @@ import "./MusicTable.css"
 
 const MusicTable = ({songs}) => {
     return ( 
-        <table>
+        <table width = "50%" height = "50%" >
             <p>SAVED SONGS</p>
             <tr>
                 <th>TITLE</th>

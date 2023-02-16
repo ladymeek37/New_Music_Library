@@ -24,9 +24,17 @@ function App() {
     return(
         <div >
             <NavBar />
-            <SearchBar songs={songs} setSongs={setSongs} />
-            <MusicTable songs = {songs}/>
-            <SongForm addNewSongProperty = {songs} GetAllSongs={GetAllSongs}/>
+            <div class ='appcontainer'>
+                <div>
+                    <SearchBar songs={songs} setSongs={setSongs} />
+                    <MusicTable songs = {songs}/>                
+                </div>
+                <div>
+                    <SongForm addNewSongProperty = {songs} GetAllSongs={GetAllSongs}/>
+                </div>                
+            </div>
+
+
         </div>
 
     )

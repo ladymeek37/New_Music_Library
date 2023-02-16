@@ -5,10 +5,10 @@
     font-family: Andale Mono, monospace;
     width:fit-content;
     border: 0.5px solid rgb(158, 154, 154);
-    float: right;
     position: relative;
-    top: -982px;
-    margin:130px
+    margin-top: 20rem;
+    margin-right: 130px;
+
 }
 
 .SongFormButton{

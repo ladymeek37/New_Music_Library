@@ -8,11 +8,11 @@ table, th, td{
     text-align: center;
 
 }
-p{ 
-    position: relative;
-    right: -250px;
+.savedsongs{ 
     font-size: xx-large;
-    border: #fde9fb;
+    text-align: center;
+    position: relative;
+    left: 350px;
 }
 .td{
     font-size:xx-small;
